@@ -128,7 +128,7 @@ document.addEventListener("keydown", (e) => {
     // funkcje sortujace
 
 
-    // 1. Tworzenie Nagłówka Aplikacji
+    // Tworzenie Nagłówka Aplikacji
     function getHeader(){
     const header = createElement('header', ['mb-10', 'text-center','bg-blue-500','rounded-lg','p-8','shadow-md']);
     const mainTitle = createElement('h1', ['text-3xl', 'font-bold','text-white'], 'Biblioteka filmowa');
@@ -276,7 +276,7 @@ function getSearchApi(){
   }
 
 
-    // 3. Generowanie Kart Filmów
+    // Generowanie Kart Filmów
     function setMovies(filtrowanie = currentFilter, sortowanie = currentSort, searchValue = ""){
 
     moviesTable = []
@@ -434,11 +434,11 @@ function getNavigation(clear) {
     return nav;
 }
 
-// --- Logika JavaScript do Generowania Strony ---
 
 
 
 
+// generowanie strony
 function renderApp(){
     
     if (!appContainer) {
@@ -457,8 +457,8 @@ function renderApp(){
     appContainer.appendChild(getNavigation())
     appContainer.appendChild(footer);
 
-} // Koniec 'DOMContentLoaded'
-
+}
+// pobieranie wstepnych danych
  fetchContent(rootUrl+"shows").then((wynik)=>{
         fetchedShows = wynik
                 try{
